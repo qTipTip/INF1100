@@ -21,13 +21,10 @@ image = Image.new('RGB', (res_x, res_y), 'black')
 pixels = image.load()
 
 # Region of the complex plane we want to visualize
-start_x = -2
-start_y = -1.5
-end_x = 2
-end_y = 0.5
-
-dx = float(end_x - start_x) / res_x
-dy = float(end_y - start_y) / res_y
+start_x = -0.4 - 2 
+start_y = 0.6 - 2
+end_x = -0.4 + 2
+end_y = 0.6 + 2
 
 # Initial complex number
 c = complex(-0.4, 0.6)
