@@ -1,4 +1,5 @@
 # Animating fractals
+### Work in Progress
 
 This python program is ment as a supplement to the animation programs in given
 in the book and mostly for fun. It gives an example of other ways we can
@@ -36,11 +37,10 @@ We therefore create an array of x-coordinates, and an array of y-coordinates
 which defines a set of points in the complex planes. This is done using
 `np.linspace`. We can now loop over points in our grid using two for loops.
 The number of elements in these arrays directly correspond to the number of
-pixels in our image.
+pixels in our image. The more pixels we have, the further we can zoom into the
+fractal without it becoming pixelated.
 
 For each complex number we iterate over, we want to apply the function to this
 complex value several times. Obviously, we can't do this for ever, so we define
 a maximum number of iterations. The larger the number of iterations is, the
 better the fractal looks.
-
-
