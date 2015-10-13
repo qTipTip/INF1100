@@ -1,4 +1,5 @@
 import numpy as np
+import os
 from PIL import Image
 
 def complex_function(z, c):
@@ -19,14 +20,11 @@ res_y = 512
 image = Image.new('RGB', (res_x, res_y), 'black')
 pixels = image.load()
 
-# Number of function evaluations for each point
-iterations = 100
-
 # Region of the complex plane we want to visualize
 start_x = -2
-start_y = -1
-end_x = 1
-end_y = 1
+start_y = -1.5
+end_x = 2
+end_y = 0.5
 
 dx = float(end_x - start_x) / res_x
 dy = float(end_y - start_y) / res_y
@@ -37,7 +35,7 @@ c = complex(-0.4, 0.6)
 complex_grid_x = np.linspace(start_x, end_y, res_x)
 compley_grid_y = np.linspace(start_y, end_y, res_y)
 
-for iterations in [1, 10, 20, 50, 100]:
+for iterations in range(10, 250, 10):
     print iterations
     for i, a in enumerate(complex_grid_x):
         for j, b in enumerate(complex_grid_x):
@@ -53,5 +51,7 @@ for iterations in [1, 10, 20, 50, 100]:
             else:
                 color = 0
                 pixels[i, j] = (int(255*(1 - color)), int(255*(1 - color)), int(255*(1 - color)))
-
+    
     image.save('tmp_%04d.png' % iterations)
+
+os.system('convert -delay 4 tmp_*.png movie.gif')
