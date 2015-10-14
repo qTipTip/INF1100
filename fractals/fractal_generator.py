@@ -10,8 +10,8 @@ def iteration_count_coloring(iterations, max_iterations):
 
 bailout_value = 2
 
-res_x = 512
-res_y = 512
+res_x = 1024
+res_y = 1024
 
 image = Image.new('RGB', (res_x, res_y), 'black')
 pixels = image.load()
@@ -27,7 +27,7 @@ complex_grid_x = np.linspace(start_x, end_y, res_x)
 compley_grid_y = np.linspace(start_y, end_y, res_y)
 
 for iterations in range(10, 250, 10):
-    print 'Computing fractal for %d iterations' % n
+    print 'Computing fractal for %d iterations' % iterations
 
     for i, a in enumerate(complex_grid_x):
         for j, b in enumerate(complex_grid_x):

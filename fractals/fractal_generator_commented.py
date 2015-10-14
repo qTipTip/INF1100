@@ -13,8 +13,8 @@ def iteration_count_coloring(iterations, max_iterations):
 bailout_value = 2
 
 # Image dimensions
-res_x = 512
-res_y = 512
+res_x = 1024
+res_y = 1024
 
 """
 We create a new image, with the RGB color space (this will determine how we
@@ -55,7 +55,7 @@ We want to create one image for each number of n, in order to see what happens
 with the fractal as the number of iterations increase.
 """
 for iterations in range(10, 250, 10):
-    print 'Computing fractal for %d iterations' % n
+    print 'Computing fractal for %d iterations' % iterations
 
     """
     We now for each point z = a + ib in the complex plane compute f(z)
