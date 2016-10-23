@@ -47,7 +47,7 @@ The discrete grid - We create points in our rectangle. The goal is to have one
 point per pixel in the image, hence we need as many points as the resolution of
 the image.
 """
-complex_grid_x = np.linspace(start_x, end_y, res_x)
+complex_grid_x = np.linspace(start_x, end_x, res_x)
 compley_grid_y = np.linspace(start_y, end_y, res_y)
 
 """
