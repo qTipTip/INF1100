@@ -14,10 +14,12 @@ class Person:
 ```
 
 We can write statements like
+
 ```python
 test = Person('Lars', 12)
 test.info()
 ```
+
 which yields the output:
 
 ```bash
@@ -26,7 +28,9 @@ Lars  is  12  years old!
 ```
 
 Consider now what happens if we write only:
+
 ```python
 print test
 ```
+
 What is the output?
