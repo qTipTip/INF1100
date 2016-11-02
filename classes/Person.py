@@ -9,3 +9,5 @@ class Person:
 
 test = Person('Lars', 12)
 test.info()
+
+print test
